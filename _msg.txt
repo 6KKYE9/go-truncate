@@ -1,1 +1,0 @@
-Add go-truncate: truncate by display width with CJK support

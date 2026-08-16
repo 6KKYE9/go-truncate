@@ -7,8 +7,8 @@ func TestTruncate(t *testing.T) {
 	if w := DisplayWidth("你好"); w != 4 {
 		t.Errorf("DisplayWidth(你好)=%d want 4", w)
 	}
-	if got := Truncate("你好world", 6, ""); got != "你好w" {
-		t.Errorf("Truncate=%q want 你好w", got)
+	if got := Truncate("你好world", 6, ""); got != "你好wo" {
+		t.Errorf("Truncate=%q want 你好wo", got)
 	}
 	if got := Truncate("hello", 3, "…"); got != "he…" {
 		t.Errorf("Truncate=%q want he…", got)
@@ -16,7 +16,7 @@ func TestTruncate(t *testing.T) {
 	if got := Truncate("hi", 10, "…"); got != "hi" {
 		t.Errorf("Truncate noop=%q", got)
 	}
-	if got := Truncate("你好world", 4, ""); got != "你" {
-		t.Errorf("Truncate=%q want 你", got)
+	if got := Truncate("你好world", 4, ""); got != "你好" {
+		t.Errorf("Truncate=%q want 你好", got)
 	}
 }
